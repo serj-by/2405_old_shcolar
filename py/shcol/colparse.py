@@ -1,8 +1,9 @@
 #! /usr/bin/env python
 import csv, sys
 
-out_fn_default="__init__.py"
-
+#out_fn_default="__init__.py"
+out_fn_fg="fg.py"
+out_fn-bg="bg.py"
 
 #settings
 fgVarPfx="shcol_fg_"
