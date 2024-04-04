@@ -1,0 +1,2 @@
+# shcol
+Shell Colors library
