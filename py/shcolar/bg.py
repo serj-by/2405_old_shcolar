@@ -1,0 +1,16 @@
+black="\033[40m";
+red="\033[41m";
+green="\033[42m";
+yellow="\033[43m";
+blue="\033[44m";
+magenta="\033[45m";
+cyan="\033[46m";
+white="\033[47m";
+gray="\033[100m";
+brightRed="\033[101m";
+brightGreen="\033[102m";
+brightYellow="\033[103m";
+brightBlue="\033[104m";
+brightMagenta="\033[105m";
+brightCyan="\033[106m";
+brightWhite="\033[107m";
