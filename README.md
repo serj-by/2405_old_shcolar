@@ -1,4 +1,4 @@
-SHCol stands for **SHell COLors**
+SHColar stands for **SHell COLors**
 
 It is Python (and PHP in future versions)  library providing strings representing ANSI escape codes for coloring output for most modern terminals.
 
