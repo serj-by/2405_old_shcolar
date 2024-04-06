@@ -12,3 +12,20 @@ fg_reset="\033[39m";
 bg_reset="\033[49m";
 
 
+def bold(col):
+	return col.replace("[", "[1;");
+
+def italic(col):
+	return col.replace("[", "[3;");
+
+def underline(col):
+	return col.replace("[", "[4;");
+
+def blink(col):
+	return col.replace("[", "[6;");
+
+def invert(col):
+	return col.replace("[", "[7;");
+
+def customattr(col, attrn):
+	return  col.replace("[", "["+str(attrn)+";");
