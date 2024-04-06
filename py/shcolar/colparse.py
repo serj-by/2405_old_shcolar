@@ -15,21 +15,21 @@ ctrlSfx="m"
 in_fn="_info/colors_wiki.txt"
 skip_1st_lines_n=4
 
-alls="'shcol_reset', 'shcol_fg_reset', ' shcol_bg_reset'"
+alls="'reset', 'fg_reset', 'bg_reset'"
 pkg_header="""
 __version__=\'1.0.0\'
 __author__=\"Serj.by\"
 
 from . import fg
 from . import bg
-__all__=['shcolar_reset', 'shcolar_fg_reset', 'shcolar_bg_reset', 'fg', 'bg']
+__all__=['reset', 'fg_reset', 'bg_reset', 'fg', 'bg']
 
 """
 
 res = """
-shcolar_reset=\"\\033[0m\";
-shcolar_fg_reset=\"\\033[39m\";
-shcolar_bg_reset=\"\\033[49m\";
+reset=\"\\033[0m\";
+fg_reset=\"\\033[39m\";
+bg_reset=\"\\033[49m\";
 
 
 """
@@ -69,14 +69,13 @@ with open(in_fn) as inf:
 		#alls +=(", " if alls!="" else "")+"'"+fgVarName+"', "+"'"+bgVarName+"'"
 		lineFgs = fgVarName+"=\""+fgVarVals+"\";\n"
 		lineBgs = bgVarName+"=\""+bgVarVals+"\";\n"
-		print (color, "color found:",fgVals,"FG",shcolar_fg_reset,bgVals,"BG",shcolar_bg_reset)
-		print(lines)
+		print (color, "color found:",fgVals,"FG",fg_reset,bgVals,"BG",bg_reset)
 		fg_res+=lineFgs
 		bg_res+=lineBgs
-print ("pkg tes:\n",pkg_res)
+#print ("pkg tes:\n",pkg_res)
 print ("going to write pkg to",out_fn_pkg,"\n")
-print ("going to write fg mofule to",out_fn_fg,"\n")
-print ("going to write bg mofule to",out_fn_bg,"\n")
+print ("going to write fg module to",out_fn_fg,"\n")
+print ("going to write bg module to",out_fn_bg,"\n")
 bw_pkg=bw_fg=bw_bg=-1
 with open (out_fn_pkg, "w") as outf:
 	bw_pkg=outf.write(pkg_res)
