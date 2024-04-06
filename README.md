@@ -25,3 +25,5 @@ Create underlined text with default color:
 Also you can combine all of the attributes above. E.g. green bold underlined text:
 
 `print (shcolar.underline(shcolar.bold((shcolar.fg.green)))+"Bold underlined green text"+shcolar.reset)`
+
+__Please note that you should append `shcolar.reset` at the end of string to make terminal return to default color/trxt decoration values__
