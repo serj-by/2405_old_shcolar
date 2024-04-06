@@ -1,10 +1,11 @@
 #! /usr/bin/env python
 import csv, sys
 
+py_path="../../py/shcolar/"
 #out_fn_default="__init__.py
-out_fn_pkg="__init__.py"
-out_fn_fg="fg.py"
-out_fn_bg="bg.py"
+out_fn_py_pkg=py_path+"__init__.py"
+out_fn_py_fg=py_path+"fg.py"
+out_fn_py_bg=py_path+"bg.py"
 
 #settings
 esc="\033"
@@ -16,7 +17,7 @@ in_fn="_data/shcolar/colors_wiki.txt"
 skip_1st_lines_n=4
 
 alls="'reset', 'fg_reset', 'bg_reset'"
-pkg_header="""
+py_pkg_header="""
 __version__=\'1.0.0\'
 __author__=\"Serj.by\"
 
@@ -26,7 +27,7 @@ __all__=['reset', 'fg_reset', 'bg_reset', 'fg', 'bg']
 
 """
 
-res = """
+py_pkg_res = """
 reset=\"\\033[0m\";
 fg_reset=\"\\033[39m\";
 bg_reset=\"\\033[49m\";
@@ -36,10 +37,10 @@ bg_reset=\"\\033[49m\";
 
 
 
-exec(res)
-pkg_res=pkg_header+res
-fg_res="";
-bg_res="";
+exec(py_pkg_res)
+py_pkg_res=py_pkg_header+py_pkg_res
+py_fg_res="";
+py_bg_res="";
 with open(in_fn) as inf:
 	for i in range(skip_1st_lines_n):
 	    lines=inf.readline()
@@ -70,20 +71,19 @@ with open(in_fn) as inf:
 		lineFgs = fgVarName+"=\""+fgVarVals+"\";\n"
 		lineBgs = bgVarName+"=\""+bgVarVals+"\";\n"
 		print (color, "color found:",fgVals,"FG",fg_reset,bgVals,"BG",bg_reset)
-		fg_res+=lineFgs
-		bg_res+=lineBgs
-#print ("pkg tes:\n",pkg_res)
-print ("going to write pkg to",out_fn_pkg,"\n")
-print ("going to write fg module to",out_fn_fg,"\n")
-print ("going to write bg module to",out_fn_bg,"\n")
+		py_fg_res+=lineFgs
+		py_bg_res+=lineBgs
+print ("going to write pkg to",out_fn_py_pkg,"\n")
+print ("going to write fg module to",out_fn_py_fg,"\n")
+print ("going to write bg module to",out_fn_py_bg,"\n")
 bw_pkg=bw_fg=bw_bg=-1
-with open (out_fn_pkg, "w") as outf:
-	bw_pkg=outf.write(pkg_res)
-with open (out_fn_fg, "w") as outf:
-	bw_fg=outf.write(fg_res)
-with open (out_fn_bg, "w") as outf:
-	bw_bg=outf.write(bg_res)
-print ("Successfully wrote", bw_pkg, "to", out_fn_pkg)
-print ("Successfully wrote", bw_fg, "to", out_fn_fg)
-print ("Successfully wrote", bw_bg, "to", out_fn_bg)
+with open (out_fn_py_pkg, "w") as outf:
+	bw_pkg=outf.write(py_pkg_res)
+with open (out_fn_py_fg, "w") as outf:
+	bw_fg=outf.write(py_fg_res)
+with open (out_fn_py_bg, "w") as outf:
+	bw_bg=outf.write(py_bg_res)
+print ("Successfully wrote", bw_pkg, "to", out_fn_py_pkg)
+print ("Successfully wrote", bw_fg, "to", out_fn_py_fg)
+print ("Successfully wrote", bw_bg, "to", out_fn_py_bg)
 print ("All done...")
