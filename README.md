@@ -26,4 +26,4 @@ Also you can combine all of the attributes above. E.g. green bold underlined tex
 
 `print (shcolar.underline(shcolar.bold((shcolar.fg.green)))+"Bold underlined green text"+shcolar.reset)`
 
-_Please note that you should append `shcolar.reset` at the end of string to make terminal return to default color/text decoration values_
+_Please note that you should append `shcolar.reset` at the end of string to make terminal return to default color/text decoration values. However you may not if you wish to left with your settings in terminal after print finished._
