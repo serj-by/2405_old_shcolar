@@ -26,4 +26,8 @@ Also you can combine all of the attributes above. E.g. green bold underlined tex
 
 `print (shcolar.underline(shcolar.bold((shcolar.fg.green)))+"Bold underlined green text"+shcolar.reset)`
 
+You could even use your own ANSI attribute code to use in your escape sequence (e.g. this one is similar to bold function (ANSI code 1). However it could be used for any unsupported (SGR)[https://en.m.wikipedia.org/wiki/Select_Graphic_Rendition_(ANSI)] parameter:
+
+`print (shcolar.customattr(shcolar.fg.green, 1)+"Bold Green using customattr"+shcolar.reset)`
+
 _Please note that you should append `shcolar.reset` at the end of string to make terminal return to default color/text decoration values. However you may not if you wish to left with your settings in terminal after print finished._
