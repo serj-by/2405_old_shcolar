@@ -1,4 +1,5 @@
 <?php
+namespace serj-by\shcolar
 
 class shcolar {
 static const esc="\033";
