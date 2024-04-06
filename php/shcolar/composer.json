@@ -1,0 +1,21 @@
+{
+"name": "serj-by/shcolar",
+"description": "SHell COLors ARray - Python and PHP libraries providing escape sequencies to colorize output in most modern shell terminals",
+"keywords": ["shell", "color", "ansi", "escape"],
+"type": "library",
+"license": "GPL3.0",
+"authors: [
+{
+"name": "SerjBy",
+"email": "serj-by@users.noreply.github.com"
+}
+],
+"require" : [
+"php": "^7"
+],
+"autoload": [
+"psr-4" : [
+"serj-by\\shcolar\\":"src/shcolar"
+]
+]
+}
