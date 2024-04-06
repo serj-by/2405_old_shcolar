@@ -1,4 +1,5 @@
 <?php
+namespace shcolar\fg
+const green="\033[32;m";
 
-$green=shcolar::esc.shcolar::ctrlPfx."32".shcolar::ctrlSfx;
 ?>
