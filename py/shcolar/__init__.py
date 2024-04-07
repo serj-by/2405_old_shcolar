@@ -12,7 +12,7 @@ fg_reset="\033[39m";
 bg_reset="\033[49m";
 
 esc="\033";
-ctrl_pfx=esc+"[";
+ctrl_pfx="\033[";
 ctrl_sfx="m"
 colors_n=8
 
