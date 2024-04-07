@@ -5,7 +5,8 @@ It is Python (and PHP in future versions)  library providing strings representin
 Color escape codes are from [Wikipedia](https://en.m.wikipedia.org/wiki/ANSI_escape_code) (Description>Colors>3-bit and 4-bit)
 
 ## Tested in:
-* Android Termux:
+### Android Termux
+`
 ## Termux App Info
 
 **APP_NAME**: `Termux`  
@@ -61,7 +62,8 @@ Color escape codes are from [Wikipedia](https://en.m.wikipedia.org/wiki/ANSI_esc
 ##
 
 bash --version
-`
+
+
 GNU bash, version 5.2.26(1)-release (aarch64-unknown-linux-android)
 `
 
