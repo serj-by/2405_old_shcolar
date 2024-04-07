@@ -15,7 +15,7 @@
 ],
 "autoload": [
 "psr-4" : [
-"serj-by\\shcolar\\":"src/shcolar"
+"serj_by\\shcolar\\":"src/shcolar"
 ]
 ]
 }
