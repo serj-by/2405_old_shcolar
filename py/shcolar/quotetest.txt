@@ -1,0 +1,8 @@
+
+test "dblquot"
+test 'snglquot'
+// single line comment
+/*
+multi line comment
+second line with 'single' & "double" quotes
+*/

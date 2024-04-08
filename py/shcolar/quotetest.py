@@ -2,9 +2,14 @@
 s="""
 test "dblquot"
 test 'snglquot'
+// single line comment
+/*
+multi line comment
+second line with 'single' & "double" quotes
+*/
 """
 
 print (s)
-with open("quotetrst.txt", "w") as outf:
+with open("quotetest.txt", "w") as outf:
 	bw=outf.write(s)
 	print ("Bytes wrote:", bw)
