@@ -15,6 +15,8 @@ bg_reset="\033[49m";
 ctrl_pfx="\033[";
 ctrl_sfx="m";
 
+colors_n=8;
+
 
 def bold(col):
         return col.replace("[", "[1;");
