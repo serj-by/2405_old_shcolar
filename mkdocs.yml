@@ -1,0 +1,8 @@
+site_name: "SHColAr"
+
+theme:
+  name: "material"
+
+plugins:
+- search
+- mkdocstrings

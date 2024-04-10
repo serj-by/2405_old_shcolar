@@ -1,3 +1,0 @@
-# [shcolar](shcolar.md).colors
-
-
