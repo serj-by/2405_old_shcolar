@@ -10,9 +10,9 @@ from . import colors
 __all__=['reset', 'fg_reset', 'bg_reset', 'fg', 'bg', 'colors']
 
 
-reset="\033[0m";
-fg_reset="\033[39m";
-bg_reset="\033[49m";
+default_all="\033[0m";
+default_fg="\033[39m";
+default_bg="\033[49m";
 
 ctrl_pfx="\033[";
 ctrl_sfx="m";
