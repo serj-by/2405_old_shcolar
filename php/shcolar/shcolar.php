@@ -1,19 +1,17 @@
+#! /usr/bin/env php
 <?php
-namespace serj_by\shcolar;
+
+include(__DIR__."/fg.php");
+include(__DIR__."/bg.php");
 
 class shcolar {
 const esc="\033";
 const ctrlPfx="[";
 const ctrlSfx="m";
-class fg {
-const green=parent::esc."32".parent::ctrlSfx;
-}
-/*
-include(__DIR__."fg.php");
-include(__DIR__."bg.php");
-*/
+use shcolar_fg;
+
 }
 
-var_dump (shcolar:fg);
+var_dump (shcolar);
 
 ?>

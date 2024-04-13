@@ -36,8 +36,11 @@ def invert(col):
 def customattr(col, attrn):
         return  col.replace("[", "["+str(attrn)+";");
 
-def bright (col):
-	return col+50+10;
+def brightind (colind):
+	return colind+50+10;
+	
+def dimind (colind):
+	return colind-50-10;
 
 def setbgfg(bg=0, fg=37+30):
 	return ctrl_pfx+str(bg+40)+";"+str(fg+30)+ctrl_sfx;

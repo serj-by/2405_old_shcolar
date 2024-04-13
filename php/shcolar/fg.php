@@ -1,6 +1,6 @@
 <?php
-namespace serj-by\shcolar\fg
-class fg {
-const green="\033[32;m";
-}
+print ("shcolar_fg loaded...");
+trait shcolar_fg {
+public const green="\033[32;m";
+};
 ?>
