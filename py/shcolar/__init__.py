@@ -2,6 +2,8 @@
 __version__="1.0.0"
 __author__="Serj.by"
 
+import re
+
 from . import fg
 from . import bg
 from . import colors
@@ -18,23 +20,31 @@ ctrl_sfx="m";
 colors_n=8;
 
 
-def bold(col):
-        return col.replace("[", "[1;");
+def bold(code):
+        return code.replace("[", "[1;");
 
-def italic(col):
-        return col.replace("[", "[3;");
+def italic(code):
+        return code.replace("[", "[3;");
 
-def underline(col):
-        return col.replace("[", "[4;");
+def underline(code):
+        return code.replace("[", "[4;");
 
-def blink(col):
-        return col.replace("[", "[6;");
+def blink(code):
+        return code.replace("[", "[6;");
 
-def invert(col):
-        return col.replace("[", "[7;");
+def invert(code):
+        return code.replace("[", "[7;");
 
-def customattr(col, attrn):
-        return  col.replace("[", "["+str(attrn)+";");
+def customattr(code, attrn):
+        return  code.replace("[", "["+str(attrn)+";");
+        
+def bright(code):
+	rx='([34][0-7])([;\w])'
+	return re.sub(rx, lambda m:  str(int(m[1])+50+10)+m[2], code)
+
+def dim(code):
+	rx='([34][0-7])([;\w])'
+	return re.sub(rx, lambda m: str(int(m[1])-50-10)+m[2], code)
 
 def brightind (colind):
 	return colind+50+10;
@@ -42,5 +52,5 @@ def brightind (colind):
 def dimind (colind):
 	return colind-50-10;
 
-def setbgfg(bg=0, fg=37+30):
+def setbgfg(bgind=0, fgind=37+30):
 	return ctrl_pfx+str(bg+40)+";"+str(fg+30)+ctrl_sfx;
