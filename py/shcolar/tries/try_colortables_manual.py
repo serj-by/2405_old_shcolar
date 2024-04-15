@@ -9,9 +9,9 @@ def test_pkg(attr_n):
 		for c in range(shcolar.colors_n):
 			ctrl_vals=str(attr_n)+";"+str(  30+c)+";"+str(((40+r) if r != -1 else 102))
 			vals=" "+str(c)+("-" if r==-1 else str(r))+" "
-			print (shcolar.ctrl_pfx+ctrl_vals+shcolar.ctrl_sfx+vals+shcolar.reset, end=("*" if c<7 else "\n"))
+			print (shcolar.ctrl_pfx+ctrl_vals+shcolar.ctrl_sfx+vals+shcolar.default_all, end=("*" if c<7 else "\n"))
 		if r==-1:
-			print("FG"+shcolar.reset);
+			print("FG"+shcolar.default_all);
 
 if __name__=="__main__":
 	print ("Test Colors tables")

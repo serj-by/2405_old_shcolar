@@ -1,3 +1,6 @@
+'''
+Escape codes for setting various background colors. Could be stylized with functions from `styles` mofule
+'''
 
 reset="\033[39m";
 
