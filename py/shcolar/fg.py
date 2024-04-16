@@ -1,5 +1,5 @@
 '''
-Escape codes for setting various background colors. Could be stylized with functions from `styles` mofule
+Escape codes for setting various foteground colors. Could be stylized with functions from `styles` module
 '''
 
 reset="\033[39m";

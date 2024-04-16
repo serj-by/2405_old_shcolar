@@ -1,3 +1,6 @@
+'''
+Module contains functions to stylize text in terminals. Most function accept colorizing escape-sequence as parameter. Use shcolar.empty escape-sequence to stay with your  current colors
+'''
 def bold(code):
 	return code.replace("[", "[1;");
 

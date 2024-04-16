@@ -1,39 +1,35 @@
-# SHColar
-SHCOlAR stands for **SHell COLors ARrays**
+# shcolar
 
-It is python library providing strings representing ANSI escape codes for coloring output for most modern terminals.
-
-Color escape codes are from [Wikipedia](https://en.m.wikipedia.org/wiki/ANSI_escape_code) (Description>Colors>3-bit and 4-bit
-
-
-Variables available in this package:
-
-
-* shcol_reset="\033[0m";
-* shcol_fg_reset="\033[39m";
-* shcol_bg_reset="\033[49m";
+SHCOLAR - stands for SHell COLor Arrays is
+[Python](https://python.org) package providing
+constants (indeed variables but who cares) for
+colorizing output to most (if not any) of
+modern terminals as well as functions to
+stylize text (make it bold/italic/underlined etc)
 
 
-Usage examples:
 
-Create bold green text:
+# [shcolar](#shcolar).bg
 
-`print (shcolar.bold(shcolar.fg.green)+"Bold green text"+shcolar.reset)`
+Escape codes for setting various background colors. Could be stylized with functions from `styles` module
 
-Create bold text with default color:
 
-`print (shcolar.bold(shcolar.default)+"Bold default color text"+shcolar.reset)`
 
-Create italic text with default color:
+# [shcolar](#shcolar).colors
 
-`print (shcolar.italic(shcolar.default)+"Italic default color text"+shcolar.reset)`
+Module contains indices of colors for escape control sequences using in terminals. See main package description for more details
 
-Create underlined text with default color:
 
-`print (shcolar.underline(shcolar.default)+"Underlined default color text"+shcolar.reset)`
 
-Also you can combine all of the attributes above. E.g. green bold underlined text:
+# [shcolar](#shcolar).fg
 
-`print (shcolar.underline(shcolar.bold((shcolar.fg.green)))+"Bold underlined green text"+shcolar.reset)`
+Escape codes for setting various foteground colors. Could be stylized with functions from `styles` module
 
-_Please note that you should append `shcolar.reset` at the end of string to make terminal return to default color/text decoration values. However you may not if you wish to left with your settings in effect in terminal after print finished._
+
+
+# [shcolar](#shcolar).styles
+
+Module contains functions to stylize text in terminals. Most function accept colorizing escape-sequence as parameter. Use shcolar.empty escape-sequence to stay with your  current colors
+
+
+
