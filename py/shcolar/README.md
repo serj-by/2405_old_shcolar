@@ -33,3 +33,10 @@ Module contains functions to stylize text in terminals. Most function accept col
 
 
 
+## Functions:
+
+#### bold(code)
+
+Make all following text bold
+
+

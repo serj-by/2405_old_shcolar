@@ -1,6 +1,3 @@
-'''
-Escape codes for setting various background colors. Could be stylized with functions from `styles` module
-'''
 
 reset="\033[49m";
 

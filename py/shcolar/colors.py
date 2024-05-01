@@ -1,6 +1,3 @@
-'''
-Module contains indices of colors for escape control sequences using in terminals. See main package description for more details
-'''
 black=0;
 """Index for black color"""
 red=1;
